@@ -19,18 +19,21 @@ public class ViewController {
 
     @GetMapping("/route.html")
     public String route (Model model) {
+        model.addAttribute("apiSecret", conf.getSecret());
         model.addAttribute("apiKey", conf.getKey());
         return "route";
     }
 
     @GetMapping("/geocode.html")
     public String geocode (Model model) {
+        model.addAttribute("apiSecret", conf.getSecret());
         model.addAttribute("apiKey", conf.getKey());
         return "geocode";
     }
 
     @GetMapping("/search.html")
     public String search (Model model) {
+        model.addAttribute("apiSecret", conf.getSecret());
         model.addAttribute("apiKey", conf.getKey());
         return "search";
     }

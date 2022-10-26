@@ -1,4 +1,9 @@
 <html xmlns:th="http://www.springframework.org/schema/mvc">
+<script th:inline="javascript" type="text/javascript">
+    window._AMapSecurityConfig = {
+        securityJsCode:[[${apiSecret}]],
+    }
+</script>
 <script type="application/javascript" th:src="@{https://webapi.amap.com/maps(v='1.4.15',key=${apiKey})}" ></script>
 <body></body>
 

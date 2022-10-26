@@ -19,7 +19,8 @@
 - 注：此文档中X值为经度，Y值为纬度
 
 #### 配置
-- 仅 "amap.api.key" 必填, 更改为你申请的高德 JS版本SDK 的APIKey
+-  "amap.api.key" 必填, 更改为你申请的高德 JS版本SDK 的APIKey  
+-  "amap.api.secret" 必填, 更改为你申请的高德 JS版本SDK 的API Secret
 
 #### 部署
 - mvn clean package

@@ -3,7 +3,10 @@ amap:
     snowflake:
       data-center-id: 1
       machine-id: 2
-    key: <你申请的高德地图 JS版本 API-Key>
+#    key: <你申请的高德地图 JS版本 API-Key>
+#    secret: <你申请的高德地图 JS版本 API-Secret>
+    key: eeab77b43b5cc79540ce22efbe75c105
+    secret: 37d6baec3a0a62c847984e058b59b082
 
 spring:
   thymeleaf:

@@ -10,6 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class AMapAPIConf {
     private SnowFlakeConf snowflake;
     private String key;
+    private String secret;
 
     public SnowFlakeConf getSnowflake() {
         if (this.snowflake == null) {
@@ -30,6 +31,14 @@ public class AMapAPIConf {
 
     public void setKey(String key) {
         this.key = key;
+    }
+
+    public String getSecret() {
+        return secret;
+    }
+
+    public void setSecret(String secret) {
+        this.secret = secret;
     }
 
     public static class SnowFlakeConf {
