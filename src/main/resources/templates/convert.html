@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.springframework.org/schema/mvc">
+<script th:inline="javascript" type="text/javascript">
+    window._AMapSecurityConfig = {
+        securityJsCode:[[${apiSecret}]],
+    }
+</script>
+<script type="application/javascript" th:src="@{https://webapi.amap.com/maps(v='1.4.15',key=${apiKey})}" ></script>
+<body></body>
+
+<script>
+    function convertFrom(id, x, y, type) {
+        AMap.plugin('AMap.Geocoder', () => {
+            let point = [x , y];
+            AMap.convertFrom(point, type, (status, result) => {
+                let resultBean = {
+                    id: id,
+                    data: JSON.stringify(result)
+                };
+                alert(JSON.stringify(resultBean));
+            });
+        });
+    }
+</script>
+</html>

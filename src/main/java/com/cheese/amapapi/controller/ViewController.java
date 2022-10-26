@@ -37,4 +37,11 @@ public class ViewController {
         model.addAttribute("apiKey", conf.getKey());
         return "search";
     }
+
+    @GetMapping("/convert.html")
+    public String convert (Model model) {
+        model.addAttribute("apiSecret", conf.getSecret());
+        model.addAttribute("apiKey", conf.getKey());
+        return "convert";
+    }
 }

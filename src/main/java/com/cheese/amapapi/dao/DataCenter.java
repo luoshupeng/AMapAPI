@@ -3,7 +3,6 @@ package com.cheese.amapapi.dao;
 import com.cheese.amapapi.exception.JSException;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
@@ -54,6 +53,15 @@ public class DataCenter {
     public HtmlPage getSearchPage (WebClient webClient) {
         try {
             return webClient.getPage("http://localhost:" + getPort() + "/search.html");
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new JSException(e.getMessage());
+        }
+    }
+
+    public HtmlPage getConvertPage (WebClient webClient) {
+        try {
+            return webClient.getPage("http://localhost:" + getPort() + "/convert.html");
         } catch (IOException e) {
             e.printStackTrace();
             throw new JSException(e.getMessage());
